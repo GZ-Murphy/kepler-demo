@@ -1,0 +1,52 @@
+{
+  "name": "uber-licence",
+  "version": "3.1.1",
+  "description": "Utility to deal with Uber OSS licences",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/uber/uber-licence.git",
+  "main": "index",
+  "homepage": "https://github.com/uber/uber-licence",
+  "bugs": {
+    "url": "https://github.com/uber/uber-licence/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "bin": {
+    "uber-licence": "bin/licence.js"
+  },
+  "dependencies": {
+    "minimist": "^1.1.0",
+    "process": "^0.10.0",
+    "readdirp": "^2.1.0",
+    "update-notifier": "^1.0.3"
+  },
+  "devDependencies": {
+    "coveralls": "^2.10.0",
+    "escape-string-regexp": "^1.0.5",
+    "fs-extra": "^2.0.0",
+    "istanbul": "^0.2.7",
+    "jshint": "^2.5.0",
+    "opn": "^0.1.2",
+    "pre-commit": "0.0.5",
+    "tap-spec": "^0.1.8",
+    "tape": "^2.12.3",
+    "temp": "^0.8.3"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/uber/uber-licence/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "npm run jshint && npm run tape",
+    "tape": "node test/index.js | tap-spec",
+    "jshint": "jshint .",
+    "cover": "istanbul cover --report none --print detail test/index.js",
+    "view-cover": "istanbul report html && opn ./coverage/index.html"
+  },
+  "engine": {
+    "node": ">=10.0.0"
+  },
+  "uber-ngen-version": "3.11.2"
+}
